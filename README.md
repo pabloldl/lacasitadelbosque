@@ -2,6 +2,27 @@
 
 Web estática local de alojamiento rural. HTML5, CSS3 y JavaScript vanilla, compatible con Live Server y apertura directa de index.html. Sin dependencias, compilación ni despliegue. Propuesta no oficial.
 
+## Revisión fotográfica — 28 de octubre de 2026
+
+Se revisaron los archivos locales, incluidos los ocultos fuera de .git. Solo existen dos JPEG de la misma panorámica del pueblo; no hay originales de la vivienda ni documentos nuevos de autorización. Las ilustraciones SVG antiguas están guardadas, pero no aparecen en el HTML ni en el manifiesto de fotografías.
+
+La apertura directa de https://www.booking.com/hotel/es/la-casita-de-el-bosque.es.html volvió a devolver una verificación de JavaScript. El contenido indexado identifica el alojamiento de 8 Los Membrillos y fotografías de exterior, salón, dormitorios y baño. No se eludió la verificación ni se descargaron fotografías protegidas. No hay permiso documentado para republicarlas.
+
+**Para continuar hacen falta los archivos originales y su autorización, no otro rediseño.** El hero, la galería de proporciones variadas, los filtros y el visor ya están preparados. No se ha incorporado ninguna fotografía nueva ni se considera terminada la corrección fotográfica.
+
+Material mínimo que debe facilitar el titular:
+
+1. Una foto horizontal del exterior o estancia principal para el hero, preferiblemente de 2400 px de ancho o más.
+2. Una foto distinta del salón y una de la cocina.
+3. Una foto de cada dormitorio que quiera mostrar, identificando cuál es cada uno.
+4. Fotografías de los baños y el aseo, identificados.
+5. Terraza, jardín o piscina únicamente si quiere mostrarlos y puede confirmar qué espacio y tipo de acceso representan.
+6. Autor y confirmación de que dispone de los derechos y autoriza la publicación de esos archivos en esta web. Si son de un fotógrafo, aportar el permiso correspondiente. Una captura de Booking o el enlace de su ficha no sustituyen los originales ni el permiso.
+
+Puede facilitar JPG, PNG o WebP sin necesidad de convertirlos previamente. Al recibirlos se comprobarán formato real, decodificación y duplicados, se optimizarán y se configurará el encuadre por imagen. La incorporación se hará en la lista propertyPhotos de js/script.js, con los campos descritos más abajo; no es necesario crear un proyecto o una galería nuevos. No se cargarán rutas antes de que existan los archivos.
+
+En esta revisión se ejecutó node --check del JavaScript y se comprobaron rutas y anclas del HTML. No se repitieron pruebas de navegador ni de recorte: no hay fotos nuevas de la casa que comprobar. Las pruebas en cuatro anchos descritas al final corresponden al trabajo del 27 de octubre, no a fotografías incorporadas hoy. No se realizó despliegue ni actualización de GitHub en esta revisión.
+
 ## Rediseño visual para fotografía — 27 de octubre de 2026
 Se sustituyeron HTML, estilos y JavaScript de la presentación anterior. La nueva estructura contiene aproximadamente 320 palabras visibles: cabecera ligera que cambia al desplazar, hero preparado para una fotografía grande con texto fuera de la imagen, presentación breve, recorrido horizontal de formatos distintos, detalles compactos, panorama del entorno, estancia y un footer nuevo. Tipografía Aptos/Segoe UI, paleta cálida, controles sencillos y composición de imágenes de borde amplio. Se retiraron las tarjetas extensas, la navegación secundaria y el acceso flotante de la versión anterior. No se leyeron ni reutilizaron componentes de otras webs.
 

@@ -1,9 +1,16 @@
 'use strict';
 
-// Solo fotos auténticas con permiso documentado. Lista vacía hasta recibirlas.
+// Fotografías locales aportadas por el usuario e incorporación solicitada el 28/10/2026.
 // {src:'img/...', alt, title, category, width, height,
 //  use:'hero'|'gallery', format:'wide'|'portrait'|'detail', position:'50% 50%', permission:'referencia en README'}
-const propertyPhotos = [];
+const propertyPhotos = [
+  { src: 'img/349875923.jpg', alt: 'Terraza de La Casita de El Bosque con mesa y sillas rojas y vistas hacia la piscina', title: 'La terraza', category: 'Exterior', width: 1024, height: 768, use: 'hero', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' },
+  { src: 'img/349116675.jpg', alt: 'Fachada blanca de La Casita de El Bosque con balcón, entrada y pérgola de madera', title: 'El exterior de la casa', category: 'Exterior', width: 576, height: 768, use: 'gallery', format: 'portrait', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' },
+  { src: 'img/349116756.jpg', alt: 'Salón con sofás naranjas, mesa de cristal, televisión y chimenea', title: 'El salón', category: 'Salón', width: 1024, height: 768, use: 'gallery', format: 'wide', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' },
+  { src: 'img/349116758.jpg', alt: 'Dormitorio con cama doble, ventilador de techo y puerta acristalada', title: 'Un dormitorio', category: 'Dormitorios', width: 576, height: 768, use: 'gallery', format: 'portrait', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' },
+  { src: 'img/520800970.jpg', alt: 'Piscina exterior rodeada de zonas ajardinadas y viviendas', title: 'La piscina exterior', category: 'Exterior', width: 1024, height: 768, use: 'gallery', format: 'wide', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' },
+  { src: 'img/349116746.jpg', alt: 'Río entre árboles y rocas en el entorno natural, fuera del alojamiento', title: 'El entorno natural · fuera de la casa', category: 'Entorno', width: 576, height: 768, use: 'gallery', format: 'portrait', position: '50% 50%', permission: 'Imagen aportada por el usuario; incorporación solicitada el 28/10/2026.' }
+];
 const seen = new Set();
 const photos = propertyPhotos.filter(photo => {
   if (!photo.permission || !/^img\//.test(photo.src) || seen.has(photo.src) || !photo.alt || !photo.title || !(photo.width > 0 && photo.height > 0)) return false;
